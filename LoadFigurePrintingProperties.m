@@ -16,3 +16,13 @@ co = [0 0 1;
     0.6350    0.0780    0.1840];
 
 set(0,'defaultAxesColorOrder',co)
+
+%% print figure 
+set(gcf,'units','inches','outerposition',[0 0 4 5.5])
+print(gcf, '-depsc', fname)
+
+aa = legend('$\| e_{k|k} \|^2$', '${\rm tr} \ P_{k|k}$');
+set(aa, 'box','off', 'fontsize',16, 'orientation','horizontal','NumColumns',1, 'location', 'northeast',...
+    'interpreter','latex')
+    
+    
